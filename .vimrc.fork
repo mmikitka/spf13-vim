@@ -1,0 +1,99 @@
+" Modeline and Notes {
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+"
+" Matt Mikitka's fork of spf13's Vim configuration: https://github.com/spf13/spf13-vim
+"
+" Clone the fork at https://github.com/mmikitka/spf13-vim
+" }
+
+" Vim UI {
+    if !exists('g:override_spf13_bundles') && filereadable(g:spf13_vundle_dir . '/vim-colors-solarized/colors/solarized.vim')
+        let g:solarized_termcolors=16
+        color solarized
+    endif
+
+    set novisualbell " No blinking
+    set noerrorbells " No noise.
+    set vb t_vb= " Disable any beeps or flashes on error"
+    set nocursorline " Incurs a significant performance penalty when drawn over
+                     " syntax-highlighted lines, which is almost everything
+" }
+
+" Formatting {
+    set fo+=o " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
+    set fo-=r " Do not automatically insert a comment leader after an enter
+    set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)"
+
+    set wrap
+" }
+
+" Filetype Detection {
+    augroup filetypedetect
+        " Detect .txt as 'text'
+        autocmd! BufNewFile,BufRead *.txt setfiletype text
+    augroup END
+" }
+
+" File-specific settings {
+    autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
+    autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+    autocmd FileType text setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd FileType xhtml,html,xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" }
+
+" Syntastic {
+    let g:syntastic_enable_balloons = 0
+
+    " The HTML, CSS, JavaScript, and PHP syntax checkers are really slow, so put them in passive
+    let g:syntastic_mode_map = { 'mode': 'active',
+                               \ 'active_filetypes': [],
+                               \ 'passive_filetypes': ['html', 'css', 'javascript', 'php'] }
+" }
+
+" Ctrl-P {
+    let g:ctrlp_switch_buffer = 'Et'
+    let g:ctrlp_open_new_file = 'h'
+" }
+
+" PHP {
+    let php_folding = 0
+
+    " Folding incurs a significant performance hit
+    " See https://github.com/spf13/PIV/issues/24
+    let g:DisableAutoPHPFolding = 1
+
+    let g:syntastic_phpcs_conf = '--standard=PEAR'
+
+    " NOTE: I downgraded the doc.vim file in PIV to the latest php-doc.vim
+    " since I do not like the Vim folding tag inserts
+    let g:pdv_cfg_Category = "Category"
+    let g:pdv_cfg_Package = "Package"
+    let g:pdv_cfg_Version = "Release: 1.0"
+    let g:pdv_cfg_License = "None""
+" }
+
+" Vdebug {
+    let g:vdebug_options= {
+    \    "port" : 9000,
+    \    "server" : 'localhost',
+    \    "timeout" : 20,
+    \    "on_close" : 'detach',
+    \    "ide_key" : '1',
+    \}
+
+    " Map the key bindings to Firebug
+    let g:vdebug_keymap = {
+    \    "run_to_cursor" : "<F1>",
+    \    "set_breakpoint" : "<F4>",
+    \    "run" : "<F5>",
+    \    "close" : "<F6>",
+    \    "detach" : "<F7>",
+    \    "get_context" : "<F8>",
+    \    "eval_under_cursor" : "<F9>",
+    \    "step_over" : "<F10>",
+    \    "step_into" : "<F11>",
+    \    "step_out" : "<S-F11>",
+    \}
+" }

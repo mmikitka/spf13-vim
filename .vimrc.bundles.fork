@@ -1,0 +1,39 @@
+" Modeline and Notes {
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker:
+"
+" Matt Mikitka's fork of spf13's Vim configuration: https://github.com/spf13/spf13-vim
+"
+" Clone the fork at https://github.com/mmikitka/spf13-vim
+" }
+
+" Disabled bundles {
+    " Reason: Do not want additional colors; happy with solarized
+    UnBundle 'spf13/vim-colors'
+    UnBundle 'flazz/vim-colorschemes'
+
+    " Reason: Using CTags and Tagbar; unnecessary features
+    UnBundle 'tacahiroy/ctrlp-funky'
+
+    " Reason: Don't need powerline fonts
+    UnBundle 'powerline/fonts'
+
+    " Reason: Doesn't work
+    UnBundle 'osyo-manga/vim-over'
+
+    " Reason: Spell checking is currently disabled
+    UnBundle 'reedes/vim-litecorrect'
+
+    " Reason: Poor documentation; unclear how to use
+    UnBundle 'mattn/webapi-vim'
+
+    " Reason: Using nerdcommenter instead
+    UnBundle 'tpope/vim-commentary'
+
+    " Reason: Unable to repeat motions; problems with adding a closing brace
+    " after adjusting an inner block.
+    UnBundle 'jiangmiao/auto-pairs'
+" }
+
+" Additional bundles {
+    Bundle 'joonty/vdebug'
+" }

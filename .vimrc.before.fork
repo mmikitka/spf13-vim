@@ -1,0 +1,31 @@
+" Modeline and Notes {
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker:
+"
+" Matt Mikitka's fork of spf13's Vim configuration: https://github.com/spf13/spf13-vim
+"
+" Clone the fork at https://github.com/mmikitka/spf13-vim
+" }
+
+" spf13 options {
+
+    " Specify the desired bundles
+    let g:spf13_bundle_groups=['debugger', 'general', 'go', 'haskell', 'html', 'javascript', 'misc', 'neocomplete', 'php', 'programming', 'python', 'ruby', 'scala', 'writing']
+
+    " Leader key
+    let g:spf13_leader=','
+
+    " Disable easier moving in tabs and windows
+    let g:spf13_no_easyWindows = 1
+
+    " Disable wrap relative motion for start/end line motions
+    let g:spf13_no_wrapRelMotion = 1
+
+    " Disable fast tab navigation
+    let g:spf13_no_fastTabs = 1
+
+    " Disable whitespace stripping
+    let g:spf13_keep_trailing_whitespace = 1
+
+    " Disable views
+    let g:spf13_no_views = 1
+" }
