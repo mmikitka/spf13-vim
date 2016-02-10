@@ -9,7 +9,7 @@
 " Vim UI {
     if !exists('g:override_spf13_bundles') && filereadable(g:spf13_vundle_dir . '/vim-colors-solarized/colors/solarized.vim')
         let g:solarized_termcolors=16
-        color solarized
+        colorscheme solarized
     endif
 
     set novisualbell " No blinking
