@@ -32,6 +32,13 @@
     " Reason: Unable to repeat motions; problems with adding a closing brace
     " after adjusting an inner block.
     UnBundle 'jiangmiao/auto-pairs'
+
+    " Reason: Use neocomplete
+    UnBundle 'pythoncomplete'
+
+    " Reason: Use neocomplete for completion, syntax checking conflicts with
+    " syntastic, not using Rope, at the moment.
+    UnBundle 'klen/python-mode'
 " }
 
 " Additional bundles {

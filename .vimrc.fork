@@ -44,12 +44,15 @@
 " }
 
 " Syntastic {
+    let g:syntastic_check_on_open = 0
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_aggregate_errors = 0
     let g:syntastic_enable_balloons = 0
 
-    " The HTML, CSS, JavaScript, and PHP syntax checkers are really slow, so put them in passive
-    let g:syntastic_mode_map = { 'mode': 'active',
+    " Passive checking by default
+    let g:syntastic_mode_map = { 'mode': 'passive',
                                \ 'active_filetypes': [],
-                               \ 'passive_filetypes': ['html', 'css', 'javascript', 'php'] }
+                               \ 'passive_filetypes': [] }
 " }
 
 " Ctrl-P {
