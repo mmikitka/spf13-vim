@@ -86,6 +86,9 @@
     \    "ide_key" : '1',
     \}
 
+    " Adjust the max depth of XDebug
+    let g:vdebug_features['max_depth'] = 2048
+
     " Map the key bindings to Firebug
     let g:vdebug_keymap = {
     \    "run_to_cursor" : "<F1>",
