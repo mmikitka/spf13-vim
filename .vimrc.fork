@@ -78,7 +78,7 @@
 " }
 
 " Vdebug {
-    let g:vdebug_options= {
+    let g:vdebug_options = {
     \    "port" : 9000,
     \    "server" : 'localhost',
     \    "timeout" : 20,
@@ -87,7 +87,9 @@
     \}
 
     " Adjust the max depth of XDebug
-    let g:vdebug_features['max_depth'] = 2048
+    let g:vdebug_features = {
+    \    "max_depth" : 2048,
+    \}
 
     " Map the key bindings to Firebug
     let g:vdebug_keymap = {
