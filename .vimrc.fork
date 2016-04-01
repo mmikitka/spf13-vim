@@ -105,3 +105,14 @@
     \    "step_out" : "<S-F11>",
     \}
 " }
+
+" vim-test {
+    nmap <silent> <leader>tn :TestNearest<CR>
+    nmap <silent> <leader>tf :TestFile<CR>
+    nmap <silent> <leader>ts :TestSuite<CR>
+    nmap <silent> <leader>tl :TestLast<CR>
+    nmap <silent> <leader>tv :TestVisit<CR>
+
+    " Use absolute file paths
+    let test#filename_modifier = ':p'
+" }

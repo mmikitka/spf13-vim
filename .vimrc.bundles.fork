@@ -42,5 +42,9 @@
 " }
 
 " Additional bundles {
+    " Debugging
     Bundle 'joonty/vdebug'
+
+    " Testing
+    Bundle 'janko-m/vim-test'
 " }
