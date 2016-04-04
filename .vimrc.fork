@@ -116,3 +116,7 @@
     " Use absolute file paths
     let test#filename_modifier = ':p'
 " }
+
+" make {
+    nmap <silent> <leader>m :make<CR>
+" }
