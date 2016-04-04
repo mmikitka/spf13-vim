@@ -47,4 +47,7 @@
 
     " Testing
     Bundle 'janko-m/vim-test'
+
+    " PlantUML
+    Bundle 'aklt/plantuml-syntax'
 " }

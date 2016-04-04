@@ -4,3 +4,8 @@
 " Spelling {
     set nospell
 " }
+
+" plantuml-syntax {
+    let g:plantuml_executable_script = '/usr/bin/plantuml -tpng'
+" }
+
