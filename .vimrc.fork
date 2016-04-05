@@ -36,7 +36,7 @@
 
 " File-specific settings {
     autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
-    autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
     autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
     autocmd FileType text setlocal shiftwidth=2 tabstop=2 softtabstop=2
     autocmd FileType xhtml,html,xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
