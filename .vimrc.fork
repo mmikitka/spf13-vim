@@ -88,7 +88,9 @@
 
     " Adjust the max depth of XDebug
     let g:vdebug_features = {
-    \    "max_depth" : 64,
+    \    "max_depth" : 5,
+    \    "max_children" : 64,
+    \    "max_data" : 128,
     \}
 
     " Map the key bindings to Firebug
